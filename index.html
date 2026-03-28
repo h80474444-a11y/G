@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Tariq Aziz | Academic Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #1a5d1a;
+            --accent-gold: #c5a059;
+            --text-dark: #2c3e50;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        /* LOGOS */
+        .header-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: var(--white);
+        }
+
+        .logo-box img { height: 85px; object-fit: contain; }
+
+        /* NAVIGATION */
+        nav {
+            background: var(--primary-green);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--accent-gold); }
+
+        /* COVER SECTION */
+        .cover-section {
+            text-align: center;
+            padding: 60px 10%;
+            background: var(--light-bg);
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 380px;
+            object-fit: cover;
+            border: 10px solid white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--primary-green); }
+
+        /* SECTIONS */
+        section { padding: 80px 10%; opacity: 0; transform: translateY(20px); transition: 0.8s all ease; }
+        section.visible { opacity: 1; transform: translateY(0); }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary-green);
+            border-bottom: 3px solid var(--accent-gold);
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        .btn-cv {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+        }
+
+        .btn-cv:hover { background: var(--primary-green); transform: translateY(-3px); }
+
+        .scroll-container {
+            max-height: 450px;
+            overflow-y: auto;
+            background: #fff;
+            padding: 25px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .list-item { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+
+        .article-card {
+            display: block;
+            background: #fff;
+            border-left: 5px solid var(--accent-gold);
+            padding: 15px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: var(--primary-green);
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .article-card:hover { background: #fdfaf4; padding-left: 25px; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 18px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: var(--primary-green); color: white; }
+
+        footer { background: #1a1a1a; color: white; padding: 50px; text-align: center; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <header class="header-logos">
+        <div class="logo-box"><img src="1000071939.jpg" alt="UAF Logo"></div>
+        <div class="logo-box"><img src="1000071938.jpg" alt="INI Logo"></div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#students">Students</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <div class="cover-section">
+        <img src="1000071940.jpg" alt="Dr. Tariq Aziz" class="profile-img">
+        <h1>Dr. Tariq Aziz</h1>
+        <p style="color: #555; font-size: 1.2rem; margin-top: 10px;">Regional Director (South Asia) INI | Associate Professor UAF</p>
+
+        <section id="introduction" class="visible" style="opacity:1; transform:none;">
+            <div style="max-width: 900px; margin: 0 auto; text-align: justify;">
+                <p>Dr. Aziz serves as the Regional Director for South Asia at the International Nitrogen Initiative (INI) and holds the position of Associate Professor of Soil Science at the University of Agriculture, Faisalabad (UAF), Pakistan. He is the lead partner from Pakistan in the global project "South Asia Nitrogen Hub" and is also involved in the UNEP/GEF funded project “International Nitrogen Management Systems (INMS)”. As a lead Editor, he has published “Nitrogen Assessment: Pakistan as a case study”.</p>
+                <br>
+                <p>Dr. Aziz has published more than 120 research articles, and produced >40 M.Sc. and 5 Ph.D students in the discipline of Soil Science. His research interests are i) improving fertilizer use efficiency, ii) nutrient recycling, iii) nutrient pollution.</p>
+                <br>
+                <p>Dr Aziz also served for about 7 years as Principal of UAF Sub-Campus Depalpur, Okara, and Project Director of two development projects worth Rs. 1300 million.</p>
+
+                <a href="Dr Tariq CV 2025.docx_20260329_030723_0000.pdf" target="_blank" class="btn-cv">Download Full CV (PDF)</a>
+            </div>
+        </section>
+    </div>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <table>
+            <tr><th>Position</th><th>Organization</th><th>Period</th></tr>
+            <tr><td>Principal, Sub-Campus Depalpur</td><td>University of Agriculture, Faisalabad</td><td>2018 - 2023</td></tr>
+            <tr><td>Project Director (HEC)</td><td>UAF (Development Project)</td><td>2021 - 2022</td></tr>
+            <tr><td>Associate Professor</td><td>University of Agriculture, Faisalabad</td><td>2013 - Date</td></tr>
+            <tr><td>Adjunct Senior Lecturer</td><td>University of Western Australia</td><td>2014 - Date</td></tr>
+        </table>
+    </section>
+
+    <section id="articles">
+        <h2>Latest Articles & Publications</h2>
+        <div style="margin-bottom: 40px;">
+            <a href="https://www.thefridaytimes.com/23-Mar-2026/gulf-crisis-already-reaching-south-asia-s-dinner-tables" target="_blank" class="article-card">Gulf crisis already reaching South Asia’s dinner tables</a>
+            <a href="https://www.thefridaytimes.com/26-Nov-2025/pakistan-unea-7-turning-climate-ambition-action-global-leadership" target="_blank" class="article-card">Pakistan at UNEA-7: Global Leadership in Action</a>
+            <a href="https://www.thefridaytimes.com/01-Jul-2025/pakistan-leads-global-call-to-tackle-hidden-nitrogen-pollution-crisis-at-unea-7" target="_blank" class="article-card">Tackling the Hidden Nitrogen Pollution Crisis</a>
+            <a href="https://www.thefridaytimes.com/01-May-2025/smarter-fertiliser-use-a-key-to-food-security-climate-action-and-clean-environments" target="_blank" class="article-card">Smarter Fertiliser Use: A Key to Food Security</a>
+        </div>
+
+        <h3>Peer Reviewed Research (Scroll)</h3>
+        <div class="scroll-container">
+            <div class="list-item"><strong>2025:</strong> Wakeel, A., et al. Managing Fertilizer Rates and Tillage Depth to Improve Nitrogen Use Efficiency. J. Soil Sci. Plant Nutr.</div>
+            <div class="list-item"><strong>2024:</strong> Rasheed, N., et al. Zinc portioning and allocation patterns in lentil genotypes. Frontiers Plant Sci.</div>
+            <div class="list-item"><strong>2023:</strong> Möhring, N., et al. Global targets to reduce nutrient and pesticide pollution. Nat Ecol Evol.</div>
+            <div class="list-item"><strong>2022:</strong> Hameed, M.K., et al. Metabolic Responses of Lettuce under NH4+/NO3−. Metabolites.</div>
+            <div class="list-item"><strong>2021:</strong> Saleem, I., et al. Potassium ferrite nano coated DAP fertilizer. Pak. J. Agric. Sci.</div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+            <div style="flex: 1; min-width: 280px;">
+                <p><strong>Email:</strong> <a href="mailto:draziz@uaf.edu.pk">draziz@uaf.edu.pk</a></p>
+                <p><strong>ORCID:</strong> <a href="https://orcid.org/0000-0002-4300-3813" target="_blank">0000-0002-4300-3813</a></p>
+            </div>
+            <div style="flex: 1; min-width: 280px;">
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tariq-aziz-44b95024/" target="_blank">Dr. Tariq Aziz Profile</a></p>
+                <p><strong>Institutional:</strong> <a href="https://web.uaf.edu.pk/FacultyProfile/Profile/516" target="_blank">UAF Faculty Profile</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Dr. Tariq Aziz. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
